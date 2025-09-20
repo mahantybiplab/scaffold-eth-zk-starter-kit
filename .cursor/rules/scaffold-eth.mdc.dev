@@ -1,0 +1,11 @@
+--- TEMPLATE FILE
+templates/base/.cursor/rules/scaffold-eth.mdc.template.mjs
+
+
+--- ARGS FILES
+	- /solidity-frameworks/foundry/.cursor/rules/scaffold-eth.mdc.args.mjs
+
+
+--- RESULTING ARGS
+	- deployScriptDir:	[script]
+	- solidityFramework:	[foundry]

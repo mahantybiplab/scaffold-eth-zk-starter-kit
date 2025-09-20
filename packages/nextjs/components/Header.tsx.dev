@@ -1,0 +1,13 @@
+--- TEMPLATE FILE
+templates/base/packages/nextjs/components/Header.tsx.template.mjs
+
+
+--- ARGS FILES
+	- /zk-extension/extension/packages/nextjs/components/Header.tsx.args.mjs
+
+
+--- RESULTING ARGS
+	- extraMenuLinksObjects:	[]
+	- logoSubtitle:	[Ethereum dev stack]
+	- logoTitle:	[Scaffold-ETH]
+	- preContent:	[]

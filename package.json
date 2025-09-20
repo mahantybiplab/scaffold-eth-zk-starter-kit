@@ -1,0 +1,69 @@
+{
+  "name": "se-2",
+  "version": "0.0.1",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "scripts": {
+    "account": "yarn foundry:account",
+    "account:generate": "yarn foundry:generate",
+    "account:import": "yarn foundry:account-import",
+    "account:reveal-pk": "yarn workspace @se-2/foundry account:reveal-pk",
+    "chain": "yarn foundry:chain",
+    "circom-clean": "yarn workspace @se-2/circuits circom-clean",
+    "circom-compile": "yarn workspace @se-2/circuits circom-compile",
+    "compile": "yarn foundry:compile",
+    "deploy": "yarn foundry:deploy",
+    "flatten": "yarn foundry:flatten",
+    "fork": "yarn foundry:fork",
+    "format": "yarn next:format && yarn foundry:format",
+    "foundry:account": "yarn workspace @se-2/foundry account",
+    "foundry:account-import": "yarn workspace @se-2/foundry account:import",
+    "foundry:chain": "yarn workspace @se-2/foundry chain",
+    "foundry:clean": "yarn workspace @se-2/foundry clean",
+    "foundry:compile": "yarn workspace @se-2/foundry compile",
+    "foundry:deploy": "yarn workspace @se-2/foundry deploy",
+    "foundry:deploy-verify": "yarn workspace @se-2/foundry deploy:verify",
+    "foundry:flatten": "yarn workspace @se-2/foundry flatten",
+    "foundry:fork": "yarn workspace @se-2/foundry fork",
+    "foundry:format": "yarn workspace @se-2/foundry format",
+    "foundry:generate": "yarn workspace @se-2/foundry account:generate",
+    "foundry:lint": "yarn workspace @se-2/foundry lint",
+    "foundry:test": "yarn workspace @se-2/foundry test",
+    "foundry:verify": "yarn workspace @se-2/foundry verify",
+    "generate": "yarn foundry:generate",
+    "generate-proof": "yarn workspace @se-2/circuits generate-proof",
+    "generate-sol-verifier": "yarn workspace @se-2/circuits generate-sol-verifier",
+    "generate-witness": "yarn workspace @se-2/circuits generate-witness",
+    "postinstall": "husky install",
+    "ipfs": "yarn workspace @se-2/nextjs ipfs",
+    "lint": "yarn next:lint && yarn foundry:lint",
+    "move-file": "yarn workspace @se-2/circuits move-file",
+    "next:build": "yarn workspace @se-2/nextjs build",
+    "next:check-types": "yarn workspace @se-2/nextjs check-types",
+    "next:format": "yarn workspace @se-2/nextjs format",
+    "next:lint": "yarn workspace @se-2/nextjs lint",
+    "next:serve": "yarn workspace @se-2/nextjs serve",
+    "precommit": "lint-staged",
+    "start": "yarn workspace @se-2/nextjs dev",
+    "test": "yarn foundry:test",
+    "trusted-setup": "yarn workspace @se-2/circuits trusted-setup",
+    "vercel": "yarn workspace @se-2/nextjs vercel",
+    "vercel:login": "yarn workspace @se-2/nextjs vercel:login",
+    "vercel:yolo": "yarn workspace @se-2/nextjs vercel:yolo",
+    "verify": "yarn foundry:verify",
+    "verify-proof": "yarn workspace @se-2/circuits verify-proof",
+    "zk-pipeline": "yarn workspace @se-2/circuits zk-pipeline"
+  },
+  "devDependencies": {
+    "husky": "~9.1.6",
+    "lint-staged": "~13.2.2"
+  },
+  "packageManager": "yarn@3.2.3",
+  "engines": {
+    "node": ">=20.18.3"
+  }
+}
