@@ -41,7 +41,7 @@
     "postinstall": "husky install",
     "ipfs": "yarn workspace @se-2/nextjs ipfs",
     "lint": "yarn next:lint && yarn foundry:lint",
-    "move-files": "yarn workspace @se-2/circuits move-file",
+    "move-files": "yarn workspace @se-2/circuits move-files",
     "next:build": "yarn workspace @se-2/nextjs build",
     "next:check-types": "yarn workspace @se-2/nextjs check-types",
     "next:format": "yarn workspace @se-2/nextjs format",
