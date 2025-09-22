@@ -31,7 +31,7 @@ const zkeyFile = join(buildDir, `${circuitName}_0001.zkey`);
 const proofFile = join(buildDir, "proof.json");
 const publicFile = join(buildDir, "public.json");
 const vkeyFile = join(buildDir, "verification_key.json");
-const verifierFile = join(buildDir, "../../foundry/contracts/solidityVerifier.sol");
+const verifierFile = join(buildDir, "../../foundry/contracts/Groth16Verifier.sol");
 
 async function main() {
   try {
@@ -42,7 +42,7 @@ async function main() {
     run(`yarn trusted-setup ${circuitName}`);
 
     // 3️⃣ Rename witness_calculator.js to .cjs if needed
-    
+
     const oldWc = join(wasmDir, "witness_calculator.js");
     if (fs.existsSync(oldWc)) {
       fs.renameSync(oldWc, wcCjs);
@@ -70,7 +70,6 @@ async function main() {
 
     console.log("🎉 ZK pipeline completed successfully!");
     console.log(`📄 Solidity verifier: ${verifierFile}`);
-
   } catch (err) {
     console.error("❌ ZK pipeline failed:", err);
     process.exit(1);

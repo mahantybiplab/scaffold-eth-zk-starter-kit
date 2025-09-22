@@ -6,15 +6,29 @@ import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+// Get circuit name from CLI argument
+const args = process.argv.slice(2);
+if (args.length === 0) {
+  console.error(
+    "❌ Please provide a circuit name: node zk-pipeline.mjs <circuitName>"
+  );
+  process.exit(1);
+}
+const circuitName = args[0];
+
 // Source files
 const wasmFile = path.join(
   __dirname,
-  "../build/multiplier2_js/multiplier2.wasm"
+  `../build/${circuitName}_js/${circuitName}.wasm`
 );
-const zkeyFile = path.join(__dirname, "../build/multiplier2_0001.zkey");
+const zkeyFile = path.join(__dirname, `../build/${circuitName}_0001.zkey`);
+const verificationFile = path.join(__dirname, "../build/verification_key.json");
 
 // Destination folder
-const destDir = path.join(__dirname, "../../nextjs/public/circuits/multiplier2_js");
+const destDir = path.join(
+  __dirname,
+  `../../nextjs/public/circuits/${circuitName}_js`
+);
 
 // Ensure destination folder exists
 if (!fs.existsSync(destDir)) {
@@ -35,3 +49,5 @@ function moveFile(src, destFolder) {
 // Move both files
 moveFile(wasmFile, destDir);
 moveFile(zkeyFile, destDir);
+moveFile(verificationFile, destDir);
+
