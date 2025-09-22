@@ -26,4 +26,7 @@ dist
 **/build/
 
 #dev
-*.dev
+**/*.dev
+
+# Ignore the entire circuits folder in nextjs/public
+nextjs/public/circuits/
